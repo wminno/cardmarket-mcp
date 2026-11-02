@@ -31,7 +31,7 @@ Requires Node 18+.
   "mcpServers": {
     "cardmarket": {
       "command": "npx",
-      "args": ["-y", "github:REPO_OWNER/cardmarket-mcp"],
+      "args": ["-y", "github:wminno/cardmarket-mcp"],
       "env": {
         "CARDMARKET_APP_TOKEN": "...",
         "CARDMARKET_APP_SECRET": "...",
