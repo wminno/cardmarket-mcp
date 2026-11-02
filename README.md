@@ -47,6 +47,10 @@ Requires Node 18+.
 
 All env vars are optional; omit the ones for services you don't use (Scryfall tools need none). Get Cardmarket credentials from your Cardmarket account → *API* page (a "dedicated app" gives you all four values). Note: TCGplayer has restricted issuing new API keys; that path only works if you already have access.
 
+## Remote (streamable-HTTP) mode
+
+`node src/index.js --http` (PORT env, default 8080) runs a stateless server at `POST /mcp`, with `/health` and `/.well-known/mcp/server-card.json`. In this mode **no server-side credentials are used**: callers pass their own keys as request headers, used for that single request and never stored or logged: `x-cardmarket-app-token`, `x-cardmarket-app-secret`, `x-cardmarket-access-token`, `x-cardmarket-access-token-secret`, `x-tcgplayer-client-id`, `x-tcgplayer-client-secret`. The Scryfall tools and `reprice_suggest` (manual mode) need none. Note a hosted instance necessarily sees your headers in transit — if that matters to you, run the stdio version locally.
+
 ## Legal / attribution
 
 - Scryfall data: used via the public API per [Scryfall's guidelines](https://scryfall.com/docs/api) (User-Agent set, rate-limited, attribution returned in every response). Prices are informational only, not for resale. Not affiliated with Scryfall.
