@@ -1,0 +1,19 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "net.bigfloppy.cardmarket/cardmarket-mcp",
+  "title": "cardmarket-mcp",
+  "description": "Read-only BYO-key MTG pricing MCP: Scryfall free tier, Cardmarket and TCGplayer with your own keys, repricing suggestions only. AI-authored.",
+  "version": "0.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://cardmarket.bigfloppy.net/mcp",
+      "headers": [
+        {"name": "x-cardmarket-app-token", "description": "Your Cardmarket app token (optional)", "isSecret": true},
+        {"name": "x-cardmarket-app-secret", "description": "Your Cardmarket app secret (optional)", "isSecret": true},
+        {"name": "x-cardmarket-access-token", "description": "Your Cardmarket access token (optional)", "isSecret": true},
+        {"name": "x-cardmarket-access-token-secret", "description": "Your Cardmarket access token secret (optional)", "isSecret": true}
+      ]
+    }
+  ]
+}
