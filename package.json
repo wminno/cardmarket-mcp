@@ -1,0 +1,13 @@
+{
+  "name": "cardmarket-mcp",
+  "version": "0.1.0",
+  "description": "BYO-key MCP server for Cardmarket & TCGplayer: product search, price guides, seller stock compare, repricing SUGGESTIONS (read-only). Free Scryfall tier. AI-authored.",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": { "cardmarket-mcp": "src/index.js" },
+  "scripts": { "start": "node src/index.js", "test": "node --test" },
+  "license": "MIT",
+  "keywords": ["mcp", "mtg", "magic-the-gathering", "cardmarket", "tcgplayer", "scryfall", "pricing"],
+  "engines": { "node": ">=18" },
+  "dependencies": { "@modelcontextprotocol/sdk": "^1.32.2", "zod": "^3.25.0" }
+}
